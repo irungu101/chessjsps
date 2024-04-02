@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+
+
+              <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong>{{message}}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+
+        <div class="col-md-5">
+
+            <form method="POST" action="/pay" style="background-color: lightsteelblue; width: 380px;text-align: center;padding: 30px;border: black;align-content: center">
+                {% csrf_token %}
+
+                <label class="form-label mt-5">Phone Number</label>
+                <input type="number" name="phone" value="254" class="form-control"><br>
+                <label class="form-label mt-5">Amount</label>
+
+
+              <input type="number" name="amount" class="form-control" placeholder="Please Enter Amount"><br>
+
+
+                <label class="form-label mt-5">Child's Name</label>
+               <input type="text" name="name" class="form-control" placeholder="Please Enter Child's Name"><br>
+
+               <label class="form-label mt-5">Admission Number</label>
+                <input type="number" name="adm" class="form-control" placeholder="Enter Admission Number"><br>
+
+                <label class="form-label mt-5">Class</label>
+               <input type="text" name="adm" class="form-control" placeholder="Please Enter Class"><br>
+
+                <label class="form-label mt-5">Date Of Birth</label>
+                <input type="date" name="adm" class="form-control"><br>
+
+                <label for="">Gender : </label>
+                Male:<input type="radio"name="gender" value="male">
+                Female:<input type="radio"name="gender" value="female"><br><br>
+
+
+                <input type="submit" name="submit" class="form-control mt-5 btn btn-success" value="pay">
+            </form>
+
+        </div>
+
+        <div class="col-md-7">
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
